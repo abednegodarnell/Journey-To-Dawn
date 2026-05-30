@@ -4,7 +4,7 @@ Journey to Dawn is a survival RPG where you explore a relaxing yet challenging w
 
 ---
 
-## 🎮 More About the Game
+## More About the Game
 
 Journey to Dawn is a survival-RPG hybrid set in a relaxing yet challenging world. As an adventurer, your goal is simple: forge your own path, build your homestead, defeat the creatures of the night, and survive to see the dawn.
 
@@ -16,7 +16,7 @@ Journey to Dawn is a survival-RPG hybrid set in a relaxing yet challenging world
 
 ---
 
-## 👥 Collaboration & Teamwork
+## Collaboration & Teamwork
 
 **Journey to Dawn** is currently a passion project, but I would love to expand this into a bigger team effort! If you are a programmer, artist, or sound designer who loves survival RPGs and wants to collaborate, feel free to reach out to me. 
 
@@ -24,7 +24,7 @@ Journey to Dawn is a survival-RPG hybrid set in a relaxing yet challenging world
 
 ---
 
-## 📄 License & Terms
+## License & Terms
 
 This project is **All Rights Reserved**. You are welcome to view the source code for educational and portfolio review purposes. However, modification, redistribution, or use of this code in other commercial or public projects requires explicit written permission from the author.
 
