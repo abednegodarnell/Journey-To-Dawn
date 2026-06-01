@@ -15,27 +15,18 @@ public class MapGeneration : MonoBehaviour
     {
         for (int grid1 = 0; grid2 = 1;)
         {
-            if (grid1 == 0)
+            for (grid1 == 0)
             {
                 Console.WriteLine("Spawn floor");
+                Instantiate(Floor);
             }
 
-            elif (grid2 == 1)
+            for (grid2 == 1)
             {
                 Console.WriteLine("Spawn wall");
-            }
-
-            for (int grid1 = 0, grid2 = 1)
-            {
-                if (grid == 0)
-                {
-                    Instantiate()
-                }
+                Instantiate(Wall);     
             }
                 
         }
     }
-    
-        
-       
 }
