@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8993292856086937262}
   - component: {fileID: 1770138546869019029}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: Grassland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
