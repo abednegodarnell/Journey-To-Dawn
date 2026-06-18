@@ -29,7 +29,7 @@ public class MapGeneration : MonoBehaviour
             for (int y = 0; y < 20; y += 1)
             {
                 Vector3 pos = new Vector3(x, heightMap[x, y] * 8, y);
-                Instantiate(Grassland, pos, Quaternion.identity);
+                
             }
         }
     }
