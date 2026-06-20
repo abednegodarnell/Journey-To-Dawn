@@ -8,6 +8,9 @@ public class MapGeneration : MonoBehaviour
     
     void Start()
     {
+        Vector3[] vertices = new Vector3[20 * 20];
+        Debug.Log(vertices.Length);
+
         for(int x = 0; x < 20; x += 1)
         {
             for (int y = 0; y < 20; y += 1)
