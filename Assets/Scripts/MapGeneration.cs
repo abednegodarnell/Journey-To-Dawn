@@ -16,10 +16,13 @@ public class MapGeneration : MonoBehaviour
             for (int y = 0; y < 20; y += 1)
             {
                 heightMap[x, y] = Mathf.PerlinNoise(x * 0.1f, y * 0.1f);
+                int index = x * 20 + y;
+                vertices[index] = new Vector3(x, heightMap[x, y], y);
             }
         }
 
         Debug.Log(heightMap[5, 5]);
+        Debug.Log(vertices[0]);
 
         SpawnTiles();
 
