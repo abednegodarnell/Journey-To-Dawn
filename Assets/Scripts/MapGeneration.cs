@@ -5,12 +5,15 @@ using UnityEngine;
 public class MapGeneration : MonoBehaviour
 {
     public GameObject Grassland;
+    public Texture2D Grass;
     float[,] heightMap = new float[20, 20]; 
     
     void Start()
     {
         Vector3[] vertices = new Vector3[20 * 20];
+        Vector2[] uvs = new Vector2[20 * 20];
         Debug.Log(vertices.Length);
+        
 
         for(int x = 0; x < 20; x += 1)
         {
@@ -19,6 +22,7 @@ public class MapGeneration : MonoBehaviour
                 heightMap[x, y] = Mathf.PerlinNoise(x * 0.1f, y * 0.1f);
                 int index = x * 20 + y;
                 vertices[index] = new Vector3(x, heightMap[x, y], y);
+                uvs[index] = new Vector2(x / 19f, y / 19f);
             }
         }
 
@@ -44,9 +48,23 @@ public class MapGeneration : MonoBehaviour
                 } 
             }
 
+        Mesh mesh = new Mesh();
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
+        mesh.RecalculateNormals();
+        mesh.uv = uvs;
+
+        MeshFilter mf = gameObject.AddComponent<MeshFilter>();
+        MeshRenderer mr = gameObject.AddComponent<MeshRenderer>();
+        mr.material = new Material(Shader.Find("Standard"));
+        mf.mesh = mesh;
+        MeshCollider mc = gameObject.AddComponent<MeshCollider>();
+        mc.sharedMesh = mesh;
+        mr.material.mainTexture = 
+        
         Debug.Log(heightMap[5, 5]);
         Debug.Log(vertices[0]);
-
+        Debug.Log(t);
         SpawnTiles();
 
     }
