@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 
@@ -21,6 +22,28 @@ public class MapGeneration : MonoBehaviour
             }
         }
 
+        int[] triangles = new int[19 * 19 * 2 * 3];
+            int t = 0;
+
+            for(int x = 0; x < 19; x++)
+            {
+                for(int y = 0; y < 19; y++)
+                {
+                    int topLeft = x * 20 + y;
+                    int topRight = (x + 1) * 20 + y;
+                    int bottomLeft = x * 20 + (y+ 1);
+                    int bottomRight = (x + 1) * 20 + (y+1);
+
+                    triangles[t++] = topLeft;
+                    triangles[t++] = bottomLeft;
+                    triangles[t++] = topRight;
+                    
+                    triangles[t++] = bottomLeft;
+                    triangles[t++] = bottomRight;
+                    triangles[t++] = topRight;
+                } 
+            }
+
         Debug.Log(heightMap[5, 5]);
         Debug.Log(vertices[0]);
 
@@ -35,7 +58,6 @@ public class MapGeneration : MonoBehaviour
             for (int y = 0; y < 20; y += 1)
             {
                 Vector3 pos = new Vector3(x, heightMap[x, y] * 8, y);
-                
             }
         }
     }
